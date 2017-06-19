@@ -12,9 +12,14 @@ function getSalmonStatus() {
 }
 
 class Body extends React.Component {
-  componentWillMount() {
+  state = {
+    isSalmon: false,
+  }
+
+  componentDidMount() {
     var status = getSalmonStatus();
     console.log('sstatus', status);
+    this.setState({isSalmon: status});
   }
 
   render() {
