@@ -36,7 +36,9 @@ class Body extends React.Component {
     }
 
     return (
-      {this.state.isSalmon ? this.renderIsSalmon() : this.renderIsNotSalmon()}
+      <div>
+        {this.state.isSalmon ? this.renderIsSalmon() : this.renderIsNotSalmon()}
+      </div>
     );
   }
 }
