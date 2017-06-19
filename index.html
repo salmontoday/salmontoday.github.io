@@ -1,7 +1,6 @@
 <html>
 <script src="https://unpkg.com/react@15/dist/react-with-addons.js"></script>
 <script src="https://unpkg.com/react-dom@15/dist/react-dom.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.0-alpha1/JSXTransformer.js"></script>
 <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 <script type="text/babel">
 function getSalmonStatus() {
@@ -31,7 +30,7 @@ class Body extends React.Component {
   }
 }
 
-ReactDOM.render(<Body>, document.getElementById('container'));
+ReactDOM.render(<Body />, document.getElementById('container'));
 
 </script>
 <div id="container" />
