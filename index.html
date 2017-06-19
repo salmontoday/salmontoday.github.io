@@ -12,7 +12,7 @@ function getSalmonStatus() {
 
 class Body extends React.Component {
   state = {
-    isSalmon: false,
+    isSalmon: null,
   }
 
   componentDidMount() {
@@ -21,11 +21,21 @@ class Body extends React.Component {
     this.setState({isSalmon: status});
   }
 
+  renderIsSalmon() {
+    return <div>YES</div>;
+  }
+
+  renderIsNotSalmon() {
+    return <div>NO</div>;
+  }
+
   render() {
+    if (this.state.isSalmon === null) {
+      return <div />;
+    }
+
     return (
-      <div>
-        Hello World
-      </div>
+      {this.state.isSalmon ? this.renderIsSalmon() : this.renderIsNotSalmon()}
     );
   }
 }
