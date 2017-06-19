@@ -11,12 +11,12 @@ function getSalmonStatus() {
 }
 
 class Body extends React.Component {
-  render() {
-    componentWillMount() {
-      var status = getSalmonStatus();
-      console.log(status);
-    }
+  componentWillMount() {
+    var status = getSalmonStatus();
+    console.log(status);
+  }
 
+  render() {
     return (
       <div>
         Hello World
