@@ -1,10 +1,9 @@
 <html>
 <script src="https://unpkg.com/react@15/dist/react.js"></script>
 <script src="https://unpkg.com/react-dom@15/dist/react-dom.js"></script>
-<script src="https://facebook.github.io/react/js/jsfiddle-integration-babel.js"></script>
 <script>
 function getSalmonStatus() {
-  const x = new XMLHttpRequest();
+  var x = new XMLHttpRequest();
   x.open('GET', 'https://nebula-carol.glitch.me/query', false);
   x.send(null);
   return x.responseText;
