@@ -9,7 +9,18 @@ function getSalmonStatus() {
   return x.responseText;
 }
 
+class Body extends React.Component {
+  render() {
+    return (
+      <div>
+        Hello World
+      </div>
+    );
+  }
+}
+
+ReactDOM.render(<Body>, document.getElementById('container'));
+
 </script>
 <div id="container" />
-
 </html>
