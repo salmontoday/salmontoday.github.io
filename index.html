@@ -17,7 +17,8 @@ class Body extends React.Component {
 
   componentDidMount() {
     var status = getSalmonStatus();
-    console.log('sstatus', status.salmonFound);
+    var x = typeof status;
+    console.log('sstatus', status, x);
     this.setState({isSalmon: status.salmonFound});
   }
 
@@ -29,7 +30,6 @@ class Body extends React.Component {
     return <div>NO</div>;
   }
 
-  //h Hoo Hah
   render() {
     if (this.state.isSalmon === null) {
       return <div />;
