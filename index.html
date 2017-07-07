@@ -16,10 +16,9 @@ class Body extends React.Component {
   }
 
   componentDidMount() {
-    var status = getSalmonStatus();
-    var x = typeof status;
-    console.log('sstatus', status, x);
-    this.setState({isSalmon: status.salmonFound});
+    var status = JSON.parse(getSalmonStatus());
+    console.log('sstatus', status);
+    this.setState({isSalmon: status});
   }
 
   renderIsSalmon() {
